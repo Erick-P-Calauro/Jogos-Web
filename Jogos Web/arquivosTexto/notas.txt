@@ -1,0 +1,2 @@
+git = ferramenta de desenvolvimento para versionar código(salvar versões de código) de forma eficiente
+    ->Espécie de google drive para salvar versões de código

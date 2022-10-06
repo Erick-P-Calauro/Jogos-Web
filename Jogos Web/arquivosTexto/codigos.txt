@@ -1,0 +1,147 @@
+----------------------GIT--------------------
+
+https://github.com/
+
+https://github.com/WilkerSebastian/desenvolvimento-de-jogos-web
+
+---para configurar o usuario na maquina---
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+---sequencia de criação inicial---
+git init
+git add .
+git commit -m "mensagem de commit"
+git branch -M main
+git remote add origin LINK DO REPOSITORIO
+git push -u origin main
+
+---criar branch e trocar de branch---
+git branch nova-branch
+git checkout nova-branch
+
+---para clonar um repositorio---
+git clone LINK DO REPOSITORIO
+
+---para atualizar o local com remoto---
+git pull
+
+---para listar todas as branchs tanto locais como remotas---
+git branch -a
+
+comando de rotina
+git add . && git commit -m "mensagem" && git push
+
+--------------------------------------------------------------------------
+
+--------------------HTML-----------------
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    
+    <canvas id="canvas"></canvas>
+
+    <script src="./main.js"></script>
+    
+</body>
+</html>
+
+-----------------CSS----------------------
+
+* {
+
+    margin: 0px;
+
+}
+
+----------JAVASCRIPT------------
+
+var canvas = document.getElementById("canvas")
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+
+var ctx = canvas.getContext("2d")
+
+var marcio = new Image()
+marcio.src = "./marcinho.png"
+
+
+function fundo() {
+
+    ctx.fillStyle = "blue"
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+}
+
+var player = {
+
+    x: canvas.width / 2,
+    y: canvas.height / 2,
+    largura: 400,
+    altura: 250,
+    desenhar: function () {
+
+        ctx.drawImage(marcio, this.x, this.y, this.largura, this.altura)
+
+    }
+
+}
+
+var tecla = "nenhuma"
+
+window.addEventListener("keydown", (evento) => {
+
+    tecla = evento.key
+
+})
+
+function loop() {
+
+    fundo()
+    fillStyle = "white"
+    ctx.font = "30px arial"
+    ctx.fillText("tecla: " + tecla , 100 , 50)
+
+    switch (tecla) {
+        case "a":
+
+            player.x -= 5
+
+            break;
+        case "d":
+
+            player.x += 5
+
+            break;
+        case "w":
+
+            player.y -= 5
+
+            break;
+        case "s":
+
+            player.x += 5
+
+            break;
+    }
+
+    player.desenhar()
+
+    setTimeout(() => {loop()} , 1000 / 60)
+
+}
+
+setTimeout(() => {loop()} , 1000 / 60)
+
+----------------------IMG-------------------
+
+https://i1.rgstatic.net/ii/profile.image/507383849525249-1497981144512_Q512/Marcio-Peres.jpg
