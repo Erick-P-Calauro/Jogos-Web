@@ -32,7 +32,7 @@ git branch -a
 comando de rotina
 git add . && git commit -m "mensagem" && git push
 
---------------------------------------------------------------------------
+https://www.invertexto.com/fecintec2
 
 --------------------HTML-----------------
 <!DOCTYPE html>
@@ -65,7 +65,9 @@ git add . && git commit -m "mensagem" && git push
 
 ----------JAVASCRIPT------------
 
-var canvas = document.getElementById("canvas")
+
+
+        ctx.drawImage(marciovar canvas = document.getElementById("canvas")
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
@@ -88,9 +90,7 @@ var player = {
     y: canvas.height / 2,
     largura: 400,
     altura: 250,
-    desenhar: function () {
-
-        ctx.drawImage(marcio, this.x, this.y, this.largura, this.altura)
+    desenhar: function () {, this.x, this.y, this.largura, this.altura)
 
     }
 
@@ -145,3 +145,4 @@ setTimeout(() => {loop()} , 1000 / 60)
 ----------------------IMG-------------------
 
 https://i1.rgstatic.net/ii/profile.image/507383849525249-1497981144512_Q512/Marcio-Peres.jpg
+
